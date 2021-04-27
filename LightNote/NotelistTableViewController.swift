@@ -8,8 +8,16 @@
 import UIKit
 
 class NotelistTableViewController: UITableViewController {
-
     
+    let formatter : DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +30,20 @@ class NotelistTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Note.dummyNoteList.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
 
         // Configure the cell...
-
+        let target = Note.dummyNoteList[indexPath.row]
+        cell.textLabel?.text = target.content
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
