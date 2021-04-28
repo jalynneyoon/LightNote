@@ -17,12 +17,18 @@ class NotelistTableViewController: UITableViewController {
         return f
     }()
     
+    var token: NSObjectProtocol?
     
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(forName: NewNoteViewController.newNoteDidInsert, object: nil, queue: OperationQueue.main) {
+        token = NotificationCenter.default.addObserver(forName: NewNoteViewController.newNoteDidInsert, object: nil, queue: OperationQueue.main) {
             [weak self] (noti) in self?.tableView.reloadData()
         }
 
