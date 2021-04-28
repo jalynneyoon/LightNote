@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		FC10AF302636BDBC00BED4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF2F2636BDBC00BED4CF /* AppDelegate.swift */; };
 		FC10AF322636BDBC00BED4CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF312636BDBC00BED4CF /* SceneDelegate.swift */; };
-		FC10AF342636BDBC00BED4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF332636BDBC00BED4CF /* ViewController.swift */; };
 		FC10AF372636BDBC00BED4CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC10AF352636BDBC00BED4CF /* Main.storyboard */; };
 		FC10AF392636BDBC00BED4CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC10AF382636BDBC00BED4CF /* Assets.xcassets */; };
 		FC10AF3C2636BDBC00BED4CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC10AF3A2636BDBC00BED4CF /* LaunchScreen.storyboard */; };
 		FC10AF4A2637A2EE00BED4CF /* NotelistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */; };
 		FC10AF4D2637ADAC00BED4CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF4C2637ADAC00BED4CF /* Model.swift */; };
+		FCF9FFAB263835EA009C3AAD /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC10AF2C2636BDBC00BED4CF /* LightNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC10AF2F2636BDBC00BED4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC10AF312636BDBC00BED4CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC10AF332636BDBC00BED4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC10AF362636BDBC00BED4CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC10AF382636BDBC00BED4CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC10AF3B2636BDBC00BED4CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC10AF3D2636BDBC00BED4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotelistTableViewController.swift; sourceTree = "<group>"; };
 		FC10AF4C2637ADAC00BED4CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
+		FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 			children = (
 				FC10AF2F2636BDBC00BED4CF /* AppDelegate.swift */,
 				FC10AF312636BDBC00BED4CF /* SceneDelegate.swift */,
-				FC10AF332636BDBC00BED4CF /* ViewController.swift */,
 				FC10AF352636BDBC00BED4CF /* Main.storyboard */,
+				FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */,
 				FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */,
 				FC10AF382636BDBC00BED4CF /* Assets.xcassets */,
 				FC10AF3A2636BDBC00BED4CF /* LaunchScreen.storyboard */,
@@ -143,8 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF9FFAB263835EA009C3AAD /* NewNoteViewController.swift in Sources */,
 				FC10AF4D2637ADAC00BED4CF /* Model.swift in Sources */,
-				FC10AF342636BDBC00BED4CF /* ViewController.swift in Sources */,
 				FC10AF302636BDBC00BED4CF /* AppDelegate.swift in Sources */,
 				FC10AF322636BDBC00BED4CF /* SceneDelegate.swift in Sources */,
 				FC10AF4A2637A2EE00BED4CF /* NotelistTableViewController.swift in Sources */,

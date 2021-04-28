@@ -17,9 +17,17 @@ class NotelistTableViewController: UITableViewController {
         return f
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: NewNoteViewController.newNoteDidInsert, object: nil, queue: OperationQueue.main) {
+            [weak self] (noti) in self?.tableView.reloadData()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
