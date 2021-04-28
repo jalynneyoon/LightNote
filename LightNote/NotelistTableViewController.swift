@@ -55,6 +55,24 @@ class NotelistTableViewController: UITableViewController {
         cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
         return cell
     }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "edit" {
+            guard let nextViewController : EditNoteViewController = segue.destination as? EditNoteViewController else {
+                return
+            }
+            guard let cell : UITableViewCell = sender as? UITableViewCell else {
+                return
+            }
+            nextViewController.textToSet = cell.textLabel?.text
+        }
+    }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,16 +106,6 @@ class NotelistTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

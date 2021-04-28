@@ -15,6 +15,7 @@
 		FC10AF4A2637A2EE00BED4CF /* NotelistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */; };
 		FC10AF4D2637ADAC00BED4CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10AF4C2637ADAC00BED4CF /* Model.swift */; };
 		FCF9FFAB263835EA009C3AAD /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */; };
+		FCF9FFAE26391D8C009C3AAD /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9FFAD26391D8C009C3AAD /* EditNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotelistTableViewController.swift; sourceTree = "<group>"; };
 		FC10AF4C2637ADAC00BED4CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
 		FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		FCF9FFAD26391D8C009C3AAD /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FC10AF2F2636BDBC00BED4CF /* AppDelegate.swift */,
 				FC10AF312636BDBC00BED4CF /* SceneDelegate.swift */,
 				FC10AF352636BDBC00BED4CF /* Main.storyboard */,
+				FCF9FFAD26391D8C009C3AAD /* EditNoteViewController.swift */,
 				FCF9FFAA263835EA009C3AAD /* NewNoteViewController.swift */,
 				FC10AF492637A2EE00BED4CF /* NotelistTableViewController.swift */,
 				FC10AF382636BDBC00BED4CF /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				FC10AF4D2637ADAC00BED4CF /* Model.swift in Sources */,
 				FC10AF302636BDBC00BED4CF /* AppDelegate.swift in Sources */,
 				FC10AF322636BDBC00BED4CF /* SceneDelegate.swift in Sources */,
+				FCF9FFAE26391D8C009C3AAD /* EditNoteViewController.swift in Sources */,
 				FC10AF4A2637A2EE00BED4CF /* NotelistTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
