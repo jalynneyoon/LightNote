@@ -33,11 +33,23 @@ class DataManager {
         }
     }
     
+    func addNewNote(_ note: String?){
+        let newNote = Note(context: mainContext)
+        
+        newNote.content = note
+        newNote.insertDate = Date()
+        
+        noteList.insert(newNote, at: 0)
+        
+        saveContext()
+        
+    }
+    
     
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ddd")
+        let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

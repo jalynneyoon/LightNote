@@ -16,13 +16,15 @@ class NewNoteViewController: UIViewController {
     @IBOutlet weak var noteTextView: UITextView!
     
     @IBAction func touchUpSaveNewNote (_ sender: Any) {
-        guard noteTextView.text != nil else {
+        guard let note = noteTextView.text, note.count > 0 else {
             return
         }
         
 //        let newNote = Note(content: note)
 //        Note.dummyNoteList.append(newNote)
-
+        DataManager.shared.addNewNote(note)
+        
+        
         NotificationCenter.default.post(name: NewNoteViewController.newNoteDidInsert, object: nil)
         
         dismiss(animated: true, completion: nil)
