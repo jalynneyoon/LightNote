@@ -46,6 +46,15 @@ class DataManager {
     }
     
     
+    func deleteNote(_ note: Note?){
+        if let note = note {
+            mainContext.delete(note)
+            saveContext()
+            fetchNote()
+        }
+    }
+    
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

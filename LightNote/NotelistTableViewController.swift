@@ -63,6 +63,21 @@ class NotelistTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+            let target = DataManager.shared.noteList[indexPath.row]
+            
+            DataManager.shared.deleteNote(target)
+            if editingStyle == .delete {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                guard let note = cell.textLabel?.text, note.count > 0 else {
+                    return
+                }
+            }
+        }
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
