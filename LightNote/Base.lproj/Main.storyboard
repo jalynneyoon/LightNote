@@ -72,31 +72,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="aIm-KA-Oid">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="20" y="120" width="374" height="742"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-SA-WfP">
+                                <rect key="frame" x="20" y="98" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EJ1-wy-qjR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EJ1-wy-qjR" firstAttribute="trailing" secondItem="aIm-KA-Oid" secondAttribute="trailing" constant="20" id="BLE-5k-RuS"/>
+                            <constraint firstItem="aIm-KA-Oid" firstAttribute="top" secondItem="gTk-SA-WfP" secondAttribute="bottom" constant="5" id="CMg-dj-mLE"/>
                             <constraint firstItem="EJ1-wy-qjR" firstAttribute="bottom" secondItem="aIm-KA-Oid" secondAttribute="bottom" id="PHY-h7-ckm"/>
-                            <constraint firstItem="aIm-KA-Oid" firstAttribute="top" secondItem="EJ1-wy-qjR" secondAttribute="top" id="kYp-wa-4zn"/>
+                            <constraint firstItem="gTk-SA-WfP" firstAttribute="top" secondItem="EJ1-wy-qjR" secondAttribute="top" constant="10" id="Rfy-9x-fZU"/>
+                            <constraint firstItem="gTk-SA-WfP" firstAttribute="leading" secondItem="EJ1-wy-qjR" secondAttribute="leading" constant="20" id="VJj-A0-4gV"/>
+                            <constraint firstItem="EJ1-wy-qjR" firstAttribute="trailing" secondItem="gTk-SA-WfP" secondAttribute="trailing" constant="20" id="b1a-UU-FlU"/>
                             <constraint firstItem="aIm-KA-Oid" firstAttribute="leading" secondItem="EJ1-wy-qjR" secondAttribute="leading" constant="20" id="nUA-pu-AnM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="60T-k5-wUa"/>
                     <connections>
+                        <outlet property="dateLabel" destination="gTk-SA-WfP" id="7we-na-iJU"/>
                         <outlet property="textView" destination="aIm-KA-Oid" id="bxm-6Z-AG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qW2-Y8-TUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="563"/>
+            <point key="canvasLocation" x="1240.5797101449277" y="562.5"/>
         </scene>
         <!--새 노트-->
         <scene sceneID="2Qq-cx-E1G">

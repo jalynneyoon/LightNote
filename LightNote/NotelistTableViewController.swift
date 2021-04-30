@@ -91,6 +91,7 @@ class NotelistTableViewController: UITableViewController {
                 return
             }
             nextViewController.textToSet = cell.textLabel?.text
+            nextViewController.dateToSet = cell.detailTextLabel?.text
         }
     }
     

@@ -10,12 +10,15 @@ import UIKit
 class EditNoteViewController: UIViewController {
     
     var textToSet : String?
+    var dateToSet : String?
     @IBOutlet weak var textView : UITextView!
+    @IBOutlet weak var dateLabel : UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.textView.text = self.textToSet
+        self.dateLabel.text = self.dateToSet
     }
     
     override func viewDidLoad() {
