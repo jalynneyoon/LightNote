@@ -7,18 +7,30 @@
 
 import UIKit
 
-class EditNoteViewController: UIViewController {
+class EditNoteViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     var textToSet : String?
     var dateToSet : String?
     @IBOutlet weak var textView : UITextView!
     @IBOutlet weak var dateLabel : UILabel!
     
+    var note : String?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.textView.text = self.textToSet
         self.dateLabel.text = self.dateToSet
+    }
+    
+    
+    @IBAction func popToNoteList(_ sender: UINavigationItem){
+        note = textView.text
+        if note != textToSet {
+            print("알림 띄우기")
+            alert(message: "변경사항을 저장하시겠습니까?")
+        }
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     override func viewDidLoad() {
@@ -39,3 +51,27 @@ class EditNoteViewController: UIViewController {
     */
 
 }
+
+
+extension UIViewController {
+    func alert(title: String = "알림",message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "저장", style: .default, handler: {(action: UIAlertAction) -> Void in
+
+            self.navigationController?.popViewController(animated: true)
+            })
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: {(action: UIAlertAction) -> Void in
+            self.navigationController?.popViewController(animated: true)
+            })
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+
+        present(alert, animated: true, completion: nil)
+    
+    }
+}
+
