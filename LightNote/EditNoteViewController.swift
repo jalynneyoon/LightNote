@@ -26,10 +26,12 @@ class EditNoteViewController: UIViewController, UIAdaptivePresentationController
     @IBAction func popToNoteList(_ sender: UINavigationItem){
         note = textView.text
         if note != textToSet {
-            print("알림 띄우기")
             alert(message: "변경사항을 저장하시겠습니까?")
         }
-        self.navigationController?.popViewController(animated: true)
+        else {
+            self.navigationController?.popViewController(animated: true)
+            
+        }
         
     }
     
@@ -53,12 +55,14 @@ class EditNoteViewController: UIViewController, UIAdaptivePresentationController
 }
 
 
-extension UIViewController {
+extension EditNoteViewController {
     func alert(title: String = "알림",message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "저장", style: .default, handler: {(action: UIAlertAction) -> Void in
-
+            
+            
+            DataManager.shared.updateNote(newContent: self.note, rContent: self.textToSet, rInsertDate: self.dateToSet)
             self.navigationController?.popViewController(animated: true)
             })
         

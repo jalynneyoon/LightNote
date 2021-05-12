@@ -27,7 +27,7 @@ class NotelistTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+//        print(DataManager.shared.noteList)
         DataManager.shared.fetchNote()
         tableView.reloadData()
     }
@@ -55,7 +55,8 @@ class NotelistTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-
+        
+        
         // Configure the cell...
         let target = DataManager.shared.noteList[indexPath.row]
         cell.textLabel?.text = target.content

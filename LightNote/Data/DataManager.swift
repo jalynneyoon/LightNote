@@ -14,6 +14,14 @@ class DataManager {
         
     }
     
+    let formatter : DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
     var mainContext : NSManagedObjectContext {
         return persistentContainer.viewContext
     }
@@ -54,6 +62,18 @@ class DataManager {
         }
     }
     
+    
+    func updateNote(newContent: String?,rContent: String?, rInsertDate: String?) {
+        
+        addNewNote(newContent)
+        
+        for i in noteList {
+            if formatter.string(for: i.insertDate) == rInsertDate && i.content == rContent {
+                deleteNote(i)
+                break
+            }
+        }
+    }
     
     // MARK: - Core Data stack
 
