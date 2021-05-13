@@ -16,6 +16,4 @@
 ## 프로젝트 실행 시 화면
 
 
-
-
-![LightNote 실행화면_1](https://user-images.githubusercontent.com/72622744/118069731-a313e100-b3df-11eb-8bb6-333dd9a8a06e.gif)
+https://user-images.githubusercontent.com/72622744/118078147-7a481780-b3f0-11eb-928b-d3b5a1019f95.mov
