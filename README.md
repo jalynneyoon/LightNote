@@ -17,4 +17,5 @@
 
 
 
-![LightNote 실행화면](/Users/johyeonyoon/Documents/LightNote 실행화면.gif)
+
+![LightNote 실행화면_1](https://user-images.githubusercontent.com/72622744/118069731-a313e100-b3df-11eb-8bb6-333dd9a8a06e.gif)
