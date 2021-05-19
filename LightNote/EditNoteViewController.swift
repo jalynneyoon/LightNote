@@ -35,6 +35,16 @@ class EditNoteViewController: UIViewController, UIAdaptivePresentationController
         
     }
     
+    @IBAction func doShare(_ sender: UIBarButtonItem){
+        let shareText: String = self.textView.text
+        var shareObject = [Any]()
+        shareObject.append(shareText)
+        
+        let activityViewController = UIActivityViewController(activityItems: shareObject, applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
